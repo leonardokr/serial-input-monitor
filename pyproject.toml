@@ -1,0 +1,81 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "serial-input-monitor"
+dynamic = ["version"]
+description = "Arduino-based serial communication system for mouse and keyboard control"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Leonardo Klein", email = "leo@ziondev.us"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: Microsoft :: Windows",
+    "Topic :: Communications",
+    "Topic :: System :: Hardware",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "pyserial>=3.5",
+    "PySide6>=6.5.0",
+    "keyboard>=1.13.0",
+]
+
+[project.optional-dependencies]
+windows = [
+    "winshell>=0.6",
+    "pywin32>=306",
+]
+dev = [
+    "pytest>=7.0",
+    "black>=22.0",
+    "flake8>=5.0",
+    "mypy>=1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/leonardokr/serial-input-monitor"
+Repository = "https://github.com/leonardokr/serial-input-monitor"
+Issues = "https://github.com/leonardokr/serial-input-monitor/issues"
+
+[project.scripts]
+serial-control = "src.main:main"
+
+[tool.setuptools_scm]
+write_to = "src/_version.py"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.black]
+line-length = 88
+target-version = ["py38", "py39", "py310", "py311", "py312"]
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+strict_equality = true

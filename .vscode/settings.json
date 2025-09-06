@@ -1,0 +1,24 @@
+{
+    "python-envs.defaultEnvManager": "ms-python.python:venv",
+    "python-envs.pythonProjects": [],
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": false,
+        "plaintext": false
+    },
+    "github.copilot.editor.enableAutoCompletions": true,
+    "github.copilot.chat.localeOverride": "en",
+    "python.defaultInterpreterPath": ".venv/Scripts/python.exe",
+    "python.terminal.activateEnvironment": true,
+    "files.associations": {
+        "*.ui": "xml",
+        "*.ino": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "disabled",
+    "C_Cpp.intelliSenseEngine": "default",
+    "C_Cpp.configurationWarnings": "disabled",
+    "editor.rulers": [88],
+    "python.linting.enabled": true,
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": ["--line-length=88"]
+}

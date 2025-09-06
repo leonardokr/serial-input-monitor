@@ -1,0 +1,11 @@
+{
+    "sketch": "arduino/examples/",
+    "configuration": "cpu=atmega328p",
+    "board": "arduino:avr:uno",
+    "port": "",
+    "programmer": "",
+    "output": "../build",
+    "additionalUrls": "",
+    "prebuild": "",
+    "postbuild": ""
+}

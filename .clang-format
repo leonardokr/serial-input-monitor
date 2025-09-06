@@ -1,0 +1,54 @@
+# clang-format configuration for Serial Input Monitor
+# Maintains compact brace style for enums and classes
+
+BasedOnStyle: LLVM
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+ColumnLimit: 120
+
+# Brace wrapping - keeps opening brace on same line
+BreakBeforeBraces: Attach
+BraceWrapping:
+  AfterClass: false
+  AfterEnum: false
+  AfterFunction: false
+  AfterNamespace: false
+  AfterStruct: false
+  AfterUnion: false
+  BeforeCatch: false
+  BeforeElse: false
+
+# Case statements - keep simple cases on single line
+AllowShortCaseLabelsOnASingleLine: true
+IndentCaseLabels: true
+
+# Short statements - keep compact formatting
+AllowShortEnumsOnASingleLine: true
+AllowShortFunctionsOnASingleLine: None
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false
+
+# Packing - allow multiple enum values per line
+BinPackArguments: true
+BinPackParameters: true
+AllowAllArgumentsOnNextLine: true
+AllowAllParametersOfDeclarationOnNextLine: true
+
+# Breaking - avoid breaking short sequences
+PenaltyBreakBeforeFirstCallParameter: 100
+PenaltyBreakComment: 60
+PenaltyBreakFirstLessLess: 120
+PenaltyBreakString: 1000
+PenaltyExcessCharacter: 1000000
+PenaltyReturnTypeOnItsOwnLine: 200
+
+# Alignment
+AlignConsecutiveAssignments: true
+AlignConsecutiveDeclarations: false
+AlignTrailingComments: true
+
+# Spacing
+SpaceAfterCStyleCast: false
+SpaceBeforeParens: Never
+SpaceInEmptyParentheses: false

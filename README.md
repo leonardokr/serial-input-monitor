@@ -1,8 +1,10 @@
-# Serial Input Monitor
+# Serial Input Monitor - Arduino Serial to Keyboard/Mouse Control
 
 ## 📖 **Overview**
 
-**Serial Input Monitor** is a comprehensive system that enables **mouse and keyboard control** through serial communication with an **Arduino Uno**. Unlike solutions that require Arduino Leonardo or other HID-capable microcontrollers, this system works with the **standard Arduino Uno** that most makers already have.
+**Serial Input Monitor** is a comprehensive system that enables **Arduino serial keyboard control** and **Arduino serial mouse control** through serial communication with an **Arduino Uno**. Unlike solutions that require Arduino Leonardo or other HID-capable microcontrollers, this system works with the **standard Arduino Uno** that most makers already have.
+
+Perfect for **Arduino automation**, **serial communication projects**, **Arduino remote control**, and **Arduino HID emulation** without needing special hardware!
 
 **This system bridges the gap** by making Arduino Uno work like an HID device through intelligent serial communication!
 
@@ -52,8 +54,13 @@ When a port is opened, all received serial data is displayed in real-time on scr
 
 - **Python 3.8+** with PySide6
 - **Arduino Uno** (or compatible)
-- **Windows** (primary support)
+- **Windows** (primary support) / **Linux** (partial support)
 - **USB-to-Serial connection**
+
+### **Platform Support**
+- ✅ **Windows**: Full support with native mouse/keyboard control
+- ⚠️ **Linux**: Serial communication works, mouse/keyboard control needs additional setup
+- ❓ **macOS**: Not tested, may work with modifications
 
 ## 🚀 **Quick Start**
 
@@ -319,6 +326,22 @@ max_log_lines = 1000
 - Check `key_mappings.py` for **supported keys**
 - Use **hex format** for key codes (`0x41` for 'A')
 - Verify **DEVICE EVENT** format
+
+### **Linux Compatibility**
+Current status:
+- ✅ **Serial communication**: Works perfectly
+- ✅ **GUI interface**: Runs with PySide6
+- ⚠️ **Mouse/Keyboard control**: Requires additional setup
+
+For Linux support, you may need:
+```bash
+# Install additional dependencies
+pip install pynput
+# Or for X11 systems
+sudo apt-get install python3-xlib
+```
+
+**Note**: The application will monitor serial data on Linux, but mouse/keyboard actions may need platform-specific implementation.
 
 ## 📄 **License**
 

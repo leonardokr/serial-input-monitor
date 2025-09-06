@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <author>Leonardo K. R.</author>
+ <class>main_ui</class>
+ <widget class="QDialog" name="main_ui">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>480</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>480</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>480</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Serial Input Monitor</string>
+  </property>
+  <property name="theme" stdset="0">
+   <string/>
+  </property>
+  <widget class="QWidget" name="main_widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>480</width>
+     <height>600</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="theme" stdset="0">
+    <string/>
+   </property>
+   <widget class="QGroupBox" name="group_main">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>481</width>
+      <height>601</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QScrollArea" name="scroll_status">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>140</y>
+       <width>461</width>
+       <height>451</height>
+      </rect>
+     </property>
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="scroll_contents_status">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>459</width>
+        <height>449</height>
+       </rect>
+      </property>
+      <widget class="QTextEdit" name="textarea_status">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>461</width>
+         <height>451</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QPushButton" name="button_check">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>90</y>
+       <width>71</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Check selected COM port</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>Check</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_port">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>221</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Serial Port</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="button_close">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>90</y>
+       <width>71</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Close selected COM port</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>Close</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="button_open">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>90</y>
+       <width>71</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Open selected COM port</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>Open</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="combo_ports">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>231</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>COM Ports</string>
+     </property>
+    </widget>
+    <widget class="Line" name="hline_1">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>20</y>
+       <width>3</width>
+       <height>100</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Orientation::Vertical</enum>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="input_hotkey_start">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>50</y>
+       <width>81</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Start Hotkey</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_actions">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>10</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Actions</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="button_start">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>50</y>
+       <width>81</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Start Listening</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>Start</string>
+     </property>
+     <property name="shortcut">
+      <string>F9</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="button_stop">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>90</y>
+       <width>81</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Stop Listening</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>Stop</string>
+     </property>
+     <property name="shortcut">
+      <string>F10</string>
+     </property>
+    </widget>
+    <widget class="Line" name="hline_2">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>20</y>
+       <width>3</width>
+       <height>100</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Orientation::Vertical</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_hotkeys">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>10</y>
+       <width>111</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Hotkeys</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="input_hotkey_stop">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>90</y>
+       <width>81</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Stop Hotkey</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="button_hotkey_start_ok">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>50</y>
+       <width>31</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Save Hotkey</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>Ok</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="button_hotkey_stop_ok">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>90</y>
+       <width>31</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Save Hotkey</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>Ok</string>
+     </property>
+    </widget>
+    <widget class="Line" name="vline_1">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>130</y>
+       <width>460</width>
+       <height>3</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Orientation::Horizontal</enum>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>combo_ports</tabstop>
+  <tabstop>button_check</tabstop>
+  <tabstop>button_open</tabstop>
+  <tabstop>button_close</tabstop>
+  <tabstop>button_start</tabstop>
+  <tabstop>button_stop</tabstop>
+  <tabstop>input_hotkey_start</tabstop>
+  <tabstop>button_hotkey_start_ok</tabstop>
+  <tabstop>input_hotkey_stop</tabstop>
+  <tabstop>button_hotkey_stop_ok</tabstop>
+  <tabstop>scroll_status</tabstop>
+  <tabstop>textarea_status</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

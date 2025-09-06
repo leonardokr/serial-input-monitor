@@ -1,0 +1,42 @@
+# Example Configuration for Serial Input Monitor
+# Copy this file to config.ini and edit as needed
+
+[HOTKEYS]
+# Key to start emulation (accepts F1-F12, Ctrl+letter, Alt+letter, etc.)
+start = F9
+
+# Key to stop emulation
+stop = F10
+
+[SERIAL]
+# Last COM port used (will be filled automatically)
+last_port = 
+
+# Transmission rate (9600 is default for Arduino)
+baud_rate = 9600
+
+# Communication timeout in seconds
+timeout = 1.0
+
+# Port test timeout in seconds
+test_timeout = 0.5
+
+[UI]
+# Interface theme (default, dark, light)
+theme = default
+
+# Log font size
+log_font_size = 9
+
+# Maximum log lines (0 = unlimited)
+max_log_lines = 1000
+
+[DEBUG]
+# Enable debug logs
+enable_debug = false
+
+# Save logs to file
+save_logs_to_file = true
+
+# Log filename
+log_filename = serial_control.log

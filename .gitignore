@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+ENV/
+*.egg-info/
+.pytest_cache/
+
+# VS Code - ignore temporary files but keep Arduino IntelliSense support files
+.vscode/launch.json
+.vscode/tasks.json
+.vscode/.browse.db
+.vscode/.browse.DB
+.vscode/.BROWSE.DB*
+.vscode/.browse.VC.db
+.vscode/ipch/
+.vscode/.vscode.db
+.vscode/c_cpp_properties.json.bak
+*.code-workspace
+
+# Logs and Temp
+*.log
+build/
+dist/
+serial_control.log
+*.tmp
+*.temp
+
+# GitHub
+.github/
+
+# Windows
+Thumbs.db
+desktop.ini
+*.lnk
+
+# IDE
+*.swp
+*.swo
+*~
+
+# Environment
+.env
+.env.local
+.env.*.local
